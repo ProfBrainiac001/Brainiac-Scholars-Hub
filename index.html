@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>All Brainiacs Academy</title>
+  <meta name="description" content="All Brainiacs Academy — excellence in learning: admissions, courses, faculty, events, news, resources and contact." />
+  <meta name="keywords" content="All Brainiacs Academy, education, school, courses, admissions, faculty" />
+  <meta name="author" content="All Brainiacs Academy" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="All Brainiacs Academy" />
+  <meta property="og:description" content="Excellence in learning" />
+  <meta property="og:type" content="website" />
+
+  <!-- Basic styles (Tailwind-like simple CSS) -->
+  <style>
+    :root{--accent:#1E40AF;--muted:#6B7280;--bg:#f8fafc}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;line-height:1.5;margin:0;background:var(--bg);color:#0f172a}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{background:#fff;border-bottom:1px solid #e6edf3}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;background:linear-gradient(135deg,#2563eb,#06b6d4);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;border-radius:8px}
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:6px}
+    nav a:hover{color:var(--accent);background:#eef2ff}
+    .cta{background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none}
+    .hero{display:grid;grid-template-columns:1fr;gap:20px;padding:40px 0}
+    .hero h1{margin:0;font-size:2rem}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .card{background:#fff;padding:16px;border-radius:10px;box-shadow:0 1px 6px rgba(10,15,30,0.04)}
+    footer{padding:24px 0;margin-top:24px;color:var(--muted)}
+    .hidden{display:none}
+    /* Responsive nav for small screens */
+    .mobile-toggle{display:none}
+    @media(max-width:800px){nav{display:none} .mobile-toggle{display:block} .hero h1{font-size:1.6rem}}
+    /* simple form styles */
+    input,select,textarea{width:100%;padding:8px;border:1px solid #e6eef5;border-radius:6px;margin-top:6px}
+    button{background:var(--accent);color:#fff;padding:10px 14px;border:none;border-radius:8px;cursor:pointer}
+    .muted{color:var(--muted)}
+    .toolbar{display:flex;gap:8px;flex-wrap:wrap}
+    .pill{background:#eef2ff;color:var(--accent);padding:6px 8px;border-radius:999px;font-size:0.85rem}
+    nav .active{color:#fff;background:var(--accent)}
+    .faculty-list img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+  </style>
+
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    "name": "All Brainiacs Academy",
+    "url": "https://example.com",
+    "description": "All Brainiacs Academy — excellence in learning: admissions, courses, faculty, events, news, resources and contact.",
+    "logo": "https://example.com/logo.png"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between">
+      <div class="brand">
+        <div class="logo">AB</div>
+        <div>
+          <div style="font-weight:700">All Brainiacs Academy</div>
+          <div class="muted" style="font-size:12px">Smart today, Smarter tomorrow</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:12px">
+        <nav id="mainNav" aria-label="Primary navigation">
+          <a href="#home" data-page="home" class="active">Home</a>
+          <a href="#about" data-page="about">About</a>
+          <a href="#admissions" data-page="admissions">Admissions</a>
+          <a href="#academics" data-page="academics">Academics</a>
+          <a href="#faculty" data-page="faculty">Faculty</a>
+          <a href="#events" data-page="events">Events</a>
+          <a href="#news" data-page="news">News</a>
+          <a href="#resources" data-page="resources">Resources</a>
+          <a href="#contact" data-page="contact">Contact</a>
+        </nav>
+        <a class="cta" href="#apply" data-page="apply">Apply Now</a>
+        <button class="mobile-toggle" id="mobileBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO / HOME -->
+    <section id="home" class="hero page">
+      <div>
+        <div class="pill">NEW: Fall 2025 Applications Open</div>
+        <h1>All Brainiacs Academy — Learn. Explore. Create.</h1>
+        <p class="muted">A modern learning environment offering K‑12 and enrichment programs, STEM labs, arts, and online learning.</p>
+        <div style="display:flex;gap:12px;margin-top:12px">
+          <a class="cta" href="#admissions" data-page="admissions">Start Application</a>
+          <a href="#academics" data-page="academics">View Programs</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="#courses" data-page="academics">Courses & Curriculum</a></li>
+          <li><a href="#calendar" data-page="events">Events Calendar</a></li>
+          <li><a href="#faculty" data-page="faculty">Meet the Faculty</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="page hidden">
+      <div class="card">
+        <h2>About Us</h2>
+        <p>All Brainiacs Academy is committed to academic excellence, character development, and innovation. We provide a student-centered curriculum, small class sizes, and an experienced faculty.</p>
+        <h4>Mission</h4>
+        <p class="muted">To nurture curiosity, critical thinking, and compassionate leadership.</p>
+        <h4>Values</h4>
+        <div class="toolbar">
+          <span class="pill">Excellence</span>
+          <span class="pill">Inclusivity</span>
+          <span class="pill">Creativity</span>
+          <span class="pill">Integrity</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADMISSIONS -->
+    <section id="admissions" class="page hidden">
+      <div class="card">
+        <h2>Admissions</h2>
+        <p>We admit students based on academic records, recommendation letters, and an interview. Apply online or request a campus tour.</p>
+        <h4>How to apply</h4>
+        <ol>
+          <li>Complete the online application below.</li>
+          <li>Upload transcripts and a recommendation.</li>
+          <li>Schedule an interview.</li>
+        </ol>
+        <h4>Apply online</h4>
+        <form id="applyForm">
+          <label>Full name<input name="name" required></label>
+          <label>Email address<input name="email" type="email" required></label>
+          <label>Program<select name="program"><option>K—5</option><option>6—8</option><option>9—12</option><option>Enrichment</option></select></label>
+          <label>Message<textarea name="message" rows="4"></textarea></label>
+          <button type="submit">Submit application</button>
+        </form>
+        <div id="applyMsg" class="muted" style="margin-top:12px"></div>
+      </div>
+    </section>
+
+    <!-- ACADEMICS -->
+    <section id="academics" class="page hidden">
+      <div class="card">
+        <h2>Academics & Programs</h2>
+        <p>Robust curriculum across core subjects and electives, plus AP courses and personalized learning tracks.</p>
+        <div id="courses" class="grid" style="margin-top:12px">
+          <div class="card">
+            <h4>STEM</h4>
+            <p>Computer science, robotics, engineering, and math clubs.</p>
+            <a href="#" class="muted">View syllabus</a>
+          </div>
+          <div class="card">
+            <h4>Humanities</h4>
+            <p>History, literature, languages, and debate.</p>
+            <a href="#" class="muted">View syllabus</a>
+          </div>
+          <div class="card">
+            <h4>Arts</h4>
+            <p>Visual arts, music, theater, and design.</p>
+            <a href="#" class="muted">View syllabus</a>
+          </div>
+          <div class="card">
+            <h4>Counseling & Support</h4>
+            <p>Academic advising, college counseling, and special education resources.</p>
+            <a href="#" class="muted">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACULTY -->
+    <section id="faculty" class="page hidden">
+      <div class="card">
+        <h2>Faculty & Staff</h2>
+        <p>Our faculty are experienced educators and industry professionals.</p>
+        <div class="grid faculty-list" style="margin-top:12px">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&crop=faces" alt="Faculty 1">
+            <h4>Dr. Aisha Bello</h4>
+            <div class="muted">Head of STEM</div>
+            <p class="muted">Ph.D. in Computer Science with 10+ years teaching experience.</p>
+          </div>
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1545996124-1c7b5a1b7baf?q=80&w=800&auto=format&fit=crop&crop=faces" alt="Faculty 2">
+            <h4>Mr. Daniel Okoye</h4>
+            <div class="muted">Humanities</div>
+            <p class="muted">M.A. in History, debate coach.</p>
+          </div>
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&crop=faces" alt="Faculty 3">
+            <h4>Ms. Grace Nwosu</h4>
+            <div class="muted">Arts</div>
+            <p class="muted">Visual arts instructor and designer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events" class="page hidden">
+      <div class="card">
+        <h2>Events & Calendar</h2>
+        <p>Campus events, open days, exams, and performances.</p>
+        <div id="calendar">
+          <!-- Simple event list; replace with calendar integration (Google Calendar / ICS) in production -->
+          <ul>
+            <li><strong>Aug 20, 2025</strong> — Orientation Day</li>
+            <li><strong>Sep 10, 2025</strong> — Back to School Night</li>
+            <li><strong>Oct 05, 2025</strong> — Science Fair</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" class="page hidden">
+      <div class="card">
+        <h2>News & Announcements</h2>
+        <article>
+          <h3>All Brainiacs wins regional robotics competition</h3>
+          <p class="muted">June 2, 2025 — Congratulations to our robotics team...</p>
+        </article>
+        <article>
+          <h3>New scholarship program announced</h3>
+          <p class="muted">May 12, 2025 — Merit-based scholarships for high-achieving students...</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section id="resources" class="page hidden">
+      <div class="card">
+        <h2>Resources</h2>
+        <div class="grid">
+          <div class="card"><h4>Library</h4><p class="muted">Online catalog and e-books.</p></div>
+          <div class="card"><h4>Student Portal</h4><p class="muted">Grades, schedules, and assignments (SSO).</p></div>
+          <div class="card"><h4>Parent Portal</h4><p class="muted">Communication and billing.</p></div>
+          <div class="card"><h4>Career Services</h4><p class="muted">Internships and college counseling.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="page hidden">
+      <div class="card">
+        <h2>Contact</h2>
+        <p>Reach us at:</p>
+        <p class="muted">123 Learning Lane, Knowledge City<br>Phone: +234 800 123 4567<br>Email: <a href="mailto:info@allbrainiacs.example">info@allbrainiacs.example</a></p>
+        <h4>Send us a message</h4>
+        <form id="contactForm">
+          <label>Your name<input name="name" required></label>
+          <label>Email<input name="email" type="email" required></label>
+          <label>Message<textarea name="message" rows="4" required></textarea></label>
+          <button type="submit">Send message</button>
+        </form>
+        <div id="contactMsg" class="muted" style="margin-top:12px"></div>
+      </div>
+    </section>
+
+    <!-- APPLY / QUICK -->
+    <section id="apply" class="page hidden">
+      <div class="card">
+        <h2>Apply Now</h2>
+        <p>Complete our short application to begin the process.</p>
+        <a href="#admissions" data-page="admissions" class="cta">Go to Admissions</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div>
+          <strong>All Brainiacs Academy</strong>
+          <div class="muted">© All Brainiacs Academy — 2025</div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <a href="#privacy" data-page="privacy">Privacy Policy</a>
+          <a href="#sitemap" data-page="sitemap">Sitemap</a>
+          <a href="#careers" data-page="careers">Careers</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Minimal JS to power SPA behaviour, forms, and accessible nav -->
+  <script>
+    // Basic single-file SPA page switcher; progressive enhancement-friendly
+    const pages = document.querySelectorAll('.page');
+    function showPage(id){
+      pages.forEach(p=>p.classList.add('hidden'));
+      const el = document.getElementById(id);
+      if(el) el.classList.remove('hidden');
+      // update nav active states
+      document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));
+      const navlink = document.querySelector(`nav a[data-page="${id}"]`);
+      if(navlink) navlink.classList.add('active');
+      history.replaceState(null,'',`#${id}`);
+    }
+
+    // initial page from hash
+    const initial = location.hash ? location.hash.slice(1) : 'home';
+    showPage(initial);
+
+    // nav clicks
+    document.querySelectorAll('[data-page]').forEach(el=>{
+      el.addEventListener('click', (e)=>{
+        const id = el.getAttribute('data-page');
+        if(id){ e.preventDefault(); showPage(id); }
+      });
+    });
+
+    // mobile nav toggle
+    const mobileBtn = document.getElementById('mobileBtn');
+    mobileBtn.addEventListener('click', ()=>{
+      const nav = document.getElementById('mainNav');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+      nav.style.flexDirection = 'column';
+    });
+
+    // simple form handlers (stub: replace with server endpoints / Netlify Forms / Formspree in production)
+    document.getElementById('applyForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const fd = new FormData(this);
+      document.getElementById('applyMsg').textContent = 'Application received — thank you. We will contact you at ' + (fd.get('email')||'your email') + '.';
+      this.reset();
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const fd = new FormData(this);
+      document.getElementById('contactMsg').textContent = 'Thanks ' + (fd.get('name')||'') + ". We'll reply to " + (fd.get('email')||'your email') + '.';
+      this.reset();
+    });
+
+    // Accessibility: keyboard nav to skip to main content
+    // (Further accessibility features should be added in production.)
+
+    // Sitemap & privacy stub pages
+    const sitemap = document.createElement('section');
+    sitemap.id = 'sitemap'; sitemap.className='page hidden card';
+    sitemap.innerHTML = '<h2>Sitemap</h2><ul><li>Home</li><li>About</li><li>Admissions</li><li>Academics</li><li>Faculty</li><li>Events</li><li>News</li><li>Resources</li><li>Contact</li></ul>';
+    document.querySelector('main').appendChild(sitemap);
+
+    const privacy = document.createElement('section');
+    privacy.id='privacy'; privacy.className='page hidden card';
+    privacy.innerHTML = '<h2>Privacy Policy</h2><p class="muted">We respect your privacy. This is a placeholder policy — replace with your official policy before publishing.</p>';
+    document.querySelector('main').appendChild(privacy);
+
+    const careers = document.createElement('section');
+    careers.id='careers'; careers.className='page hidden card';
+    careers.innerHTML = '<h2>Careers</h2><p class="muted">Open roles will be posted here. Email hr@allbrainiacs.example to inquire.</p>';
+    document.querySelector('main').appendChild(careers);
+
+    // simple client-side search (title only) — extend as needed
+    function simpleSearch(q){
+      const results = [];
+      document.querySelectorAll('main h2, main h3, main h4').forEach(h=>{
+        if(h.textContent.toLowerCase().includes(q.toLowerCase())){
+          results.push({title:h.textContent,anchor:'#'+h.closest('.page').id});
+        }
+      });
+      return results;
+    }
+
+    // Example: log search results for "STEM" (remove in production)
+    // console.log(simpleSearch('STEM'));
+  </script>
+</body>
+</html>
